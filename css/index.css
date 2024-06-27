@@ -1,3 +1,167 @@
 @charset "utf-8";
 /* 폰트 가져오기 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+ul,li{
+    list-style: none;
+}
+img{
+    border-style: none;
+    vertical-align: middle;
+}
+html{
+    font-size: 16px;
+}
+body{
+    /* 폰트 링크가져오고 폰트패밀리 설정해야지 적용됨 */
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 300;
+    color: #444;
+    /* 라인헤이트 숫자만 적용하면 폰트사이즈*숫자,px로 적용하면 픽셀만큼만 적용 */
+    line-height: 1.14;
+    letter-spacing: 0;
+    /* 줄바꿈 할때 단어를 기준으로 설정 
+    줄바꿈하지 않음 :break-all*/
+    word-break: break-all;
+    
+}
+/* 모달창 */
+/* top버튼 */
+/* 전체레이아웃 */
+.wrap{
+    position: relative;
+    display: block;
+}
+/* 상단 */
+.header{
+    width: 100%;
+    height: 80px;
+    /* 스크롤내릴때 움직이지 않음 
+     position: fixed; 세트로 top,left:0*/
+    position: fixed;
+    top: 0;
+    left: 0;
+overflow: hidden;
+/* 호버했을때 자연스럽게 내려옴 */
+transition: all 0.5s;
+}
+.header:hover{
+    height: calc(330px + 80px);
+}
+.header::before{
+    content: "";
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #d8d8d8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+.header::after{
+    content: "";
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: 430px;
+    background-color: rgba(0,0,0,0.5);
+}
+.header-inner{
+    width: 100%;
+    max-width: 1800px;
+    height: 80px;
+position: relative;
+    margin: auto;
+    z-index: 1;
+}
+/* 로고 */
+.logo{
+    width: 220px;
+    height: 100%;
+
+    float: left;
+    padding-top: 20px;
+}
+/* 네비게이션 */
+.nav{
+    width: calc(100% - 220px - 150px);
+
+    float: left;
+}
+.gnb{
+    /* 마진 오토의 조건 1. 높이값 2.너비값 3.*/
+margin: 0 auto;
+width: calc(178px*6);
+}
+.gnb > li{
+    width: 178px;
+float: left;
+
+}
+.gnb > li > a {
+font-size: 19px;
+/* 높이,중간정렬에 적용됨 */
+line-height: 80px;
+font-weight: 500;
+}
+/* depth2*/
+.depth2{
+    padding: 40px 0;
+
+}
+.depth2 > li > a{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.92;
+}
+/* 언어 */
+.lang{
+    width: 150px;
+    height: 100%;
+
+    float: right;
+position: relative;
+}
+.lang-list{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.lang-list li{
+    position: relative;
+    float: left;
+
+    padding: 10px;
+}
+.lang-list li a{
+    /* 폰트 대문자로 변경 */
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    color: #888;
+}
+.lang-list li:last-child a{
+    color: #333;
+}
+.lang-list li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 11px;
+    background-color: #999;
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+.lang-list li:first-child::after{
+content: none;
+}
