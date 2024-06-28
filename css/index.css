@@ -22,15 +22,14 @@ html {
   font-size: 16px;
 }
 body {
-  /* 폰트 링크가져오고 폰트패밀리 설정해야지 적용됨 */
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 300;
   color: #444;
-  /* 라인헤이트 숫자만 적용하면 폰트사이즈*숫자,px로 적용하면 픽셀만큼만 적용 */
   line-height: 1.14;
-  letter-spacing: 0;
+  letter-spacing: 0px;
   /* 줄바꿈 할때 단어를 기준으로 설정 
-    줄바꿈하지 않음 :break-all*/
+   break-all: 줄바꿈 하지 않는다.
+    */
   word-break: break-all;
   height: 2000px;
 }
@@ -41,11 +40,19 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-
+  /* background-color: rgb(203, 247, 232); */
+}
+/* clearfix */
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
 }
 /* 모달창 */
 /* top버튼 */
-/* 전체레이아웃 */
+/* 전체 레이아웃 */
 .wrap {
   position: relative;
   display: block;
@@ -54,28 +61,25 @@ body {
 .header {
   width: 100%;
   height: 80px;
-  /* 스크롤내릴때 움직이지 않음 
-     position: fixed; 세트로 top,left:0*/
   position: fixed;
   top: 0;
   left: 0;
-  overflow: hidden;
-  /* 호버했을때 자연스럽게 내려옴 */
-  transition: all 0.5s;
   z-index: 9999;
+  overflow: hidden;
+  transition: all 0.5s;
 }
 .header:hover {
   height: calc(330px + 80px);
 }
 .header::before {
   content: "";
-  width: 100%;
-  height: 80px;
-  border-bottom: 1px solid #d8d8d8;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 80px;
   background-color: #fff;
+  border-bottom: 1px solid #d8d8d8;
 }
 .header::after {
   content: "";
@@ -90,8 +94,8 @@ body {
   width: 100%;
   max-width: 1800px;
   height: 80px;
-  position: relative;
   margin: auto;
+  position: relative;
   z-index: 1;
 }
 /* 로고 */
@@ -104,14 +108,14 @@ body {
 }
 /* 네비게이션 */
 .nav {
+  position: relative;
   width: calc(100% - 220px - 150px);
 
   float: left;
 }
 .gnb {
-  /* 마진 오토의 조건 1. 높이값 2.너비값 3.*/
-  margin: 0 auto;
   width: calc(178px * 6);
+  margin: 0 auto;
 }
 .gnb > li {
   width: 178px;
@@ -119,11 +123,11 @@ body {
 }
 .gnb > li > a {
   font-size: 19px;
-  /* 높이,중간정렬에 적용됨 */
-  line-height: 80px;
   font-weight: 500;
+  /* height: 80px; */
+  line-height: 80px;
 }
-/* depth2*/
+/* depth2 */
 .depth2 {
   padding: 40px 0;
 }
@@ -134,25 +138,23 @@ body {
 }
 /* 언어 */
 .lang {
+  position: relative;
   width: 150px;
   height: 100%;
-
-  float: right;
-  position: relative;
+  float: left;
 }
 .lang-list {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 23px;
 }
 .lang-list li {
   position: relative;
   float: left;
-
   padding: 10px;
 }
 .lang-list li a {
-  /* 폰트 대문자로 변경 */
+  display: block;
   text-transform: uppercase;
   font-size: 15px;
   font-weight: 700;
@@ -163,13 +165,13 @@ body {
 }
 .lang-list li::after {
   content: "";
+  position: absolute;
+  top: 14px;
+  left: 0;
   display: block;
   width: 1px;
   height: 11px;
   background-color: #999;
-  position: absolute;
-  top: 14px;
-  left: 0;
 }
 .lang-list li:first-child::after {
   content: none;
@@ -180,7 +182,7 @@ body {
   display: block;
   width: 100%;
   height: 910px;
-  background: url("../images/img_visual01.png") no-repeat center;
+  background: url("../images/img_visual01.png") no-repeat center fixed;
   background-size: cover;
   margin-top: 80px;
 }
@@ -189,22 +191,13 @@ body {
   height: 100%;
   padding-top: 1px;
 }
-.visual-slogun {
+.visual-slogan {
   position: relative;
   display: block;
   font-size: 70px;
   color: #fff;
   font-weight: 500;
   margin-top: 245px;
-}
-.visual-slogun::before{
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 5px;
-    top: -50px;
-    left: 0;
-    background-color: red;
 }
 .visual-txt {
   position: relative;
@@ -218,11 +211,204 @@ body {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translatex(-50%);
-  background: url(../images/bg_common.png) no-repeat;
-  background-position: -122px 0;
+  transform: translateX(-50%);
   font-size: 0;
   width: 33px;
   height: 33px;
+  background: url("../images/bg_common.png") no-repeat;
+  background-position: -122px 0;
   border: 0;
+}
+/* 비지니스 */
+.business {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 100px 0;
+  background-color: #f8f8f8;
+}
+.business-inner {
+  position: relative;
+  display: block;
+}
+/* 비지니스 상단 */
+.business-top {
+  margin-bottom: 70px;
+  text-align: center;
+}
+.business-title {
+  position: relative;
+  display: block;
+  font-size: 44px;
+  font-weight: 600;
+  color: #111;
+  padding-bottom: 31px;
+  background-color: aqua;
+}
+.business-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 37px);
+
+  width: 37px;
+  height: 4px;
+  background-color: #ed1c24;
+}
+.business-desc {
+  margin-top: 30px;
+}
+/* 비지니스 이미지 하단*/
+.business-bottom,
+.business-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 420px;
+}
+.business li {
+  position: relative;
+  display: block;
+  width: calc(100% / 5);
+  height: 420px;
+  float: left;
+  background: url("../images/img_business.png") no-repeat;
+  background-position: 0 0;
+}
+.business-list li:first-child {
+  background-position: calc(240px * 0) 0px;
+}
+.business-list li:nth-child(2) {
+  background-position: calc(240px * -1) 0px;
+}
+.business-list li:nth-child(3) {
+  background-position: calc(240px * -2) 0px;
+}
+.business-list li:nth-child(4) {
+  background-position: calc(240px * -3) 0px;
+}
+.business-list li:nth-child(5) {
+  background-position: calc(240px * -4) 0px;
+}
+.business-list li a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 128, 37, 0);
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  padding: 100px 0;
+  transition: all 0.5s;
+}
+.business-list li a:hover {
+  background-color: rgba(244, 128, 37, 1);
+}
+.business-list li a:hover::after {
+  opacity: 1;
+}
+.business-list li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 90px;
+  width: 130px;
+  height: 112px;
+  background: url("../images/bg_common.png") no-repeat;
+  background-position: 0 0;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.business-list li:nth-child(1) a::after {
+  background-position: -169px 0;
+}
+.business-list li:nth-child(2) a::after {
+  background-position: -298px 0;
+}
+.business-list li:nth-child(3) a::after {
+  background-position: 0 -117px;
+}
+.business-list li:nth-child(4) a::after {
+  background-position: -139px -122px;
+}
+.business-list li:nth-child(5) a::after {
+  background-position: -274px -115px;
+  left: 53%;
+  bottom: 80px;
+}
+/* 뉴스 */
+.news {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 55px 0;
+  background-color: #ed1c24;
+}
+.news-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background-color: #58595b;
+}
+.news-inner {
+  position: relative;
+  display: block;
+}
+.news-wrap {
+  position: relative;
+  display: block;
+  width: calc(50% - 90px);
+}
+.news-wrap:nth-child(1) {
+  float: left;
+}
+.news-wrap:nth-child(2) {
+  float: right;
+}
+.news-wrap h3 {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 45px;
+}
+.news-content {
+  position: relative;
+  display: block;
+}
+.news-list li {
+  position: relative;
+  display: block;
+  padding: 25px 0;
+  border-top: 1px solid rgba(225, 225, 225, 0.3);
+}
+.news-list li a {
+  color: #fff;
+  position: relative;
+  display: block;
+  font-size: 16px;
+}
+.news-list li a::after{
+  content: "";
+  top: 0;
+  right: 0%;
+  background: url("/images/bg_common.png")no-repeat;
+  background-position: -50px -6px;
+  display: block;
+  position: absolute;
+  width: 57px;
+  height: 23px;
+}
+.news-txt {
+  position: relative;
+  display: block;
+  /* 말줄임 표시 */
+  width: 50%;
+  white-space: nowrap; /* 줄내림 x */
+text-overflow: ellipsis;
+overflow: hidden;
 }

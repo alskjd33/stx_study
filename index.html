@@ -22,33 +22,26 @@
     <meta property="og:image" content="images/metaimg.png" />
     <!-- 소셜 미디어에서 페이지가 공유될 때 사용되는 설명 -->
     <meta property="og:description" content="STX건설 웹사이트입니다." />
-    <!-- fivicon적용-->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="images/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="images/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/site.webmanifest" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <!-- fivicon적용 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icon/favicon-16x16.png" />
+    <link rel="manifest" href="images/icon/site.webmanifest" />
+    <link rel="mask-icon" href="images/icon/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- css초기화 -->
+    <!-- css 초기화 -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <title>stx건설</title>
+    <!-- 자바스크립트 -->
+    <!-- IE9 이하는 THML5태그를 지원하지 않는다. -->
+    <script src="js/html5shiv.js"></script>
+    <!-- css3적용  -->
+    <!-- <script src="js/prefixfree.min.js"></script> -->
+    <!-- <script src="js/main.js" defer></script> -->
+    <script src="js/main.js"></script>
+    <title>STX 건설</title>
   </head>
   <body>
     <!-- 모달창 -->
@@ -60,7 +53,7 @@
         <div class="header-inner">
           <!-- 로고 -->
           <a href="index.html" class="logo">
-            <img src="images/smstxconst_logo.png" alt="stx건설" />
+            <img src="images/smstxconst_logo.png" alt="STX건설" />
           </a>
           <!-- 네비게이션 -->
           <nav class="nav">
@@ -133,21 +126,95 @@
       <!-- 비주얼 -->
       <section class="visual">
         <div class="visual-inner container">
-          <h1 class="visual-slogun">
-            BEST OF THE WORLD <br />
+          <h1 class="visual-slogan">
+            BEST OF THE WORLD<br />
             STX Engineering & Construction
           </h1>
-          <span class="visual-txt"
-            >세계최고를 향해 STX건설이 힘차게 질주합니다!</span
-          >
+          <span class="visual-txt">세계최고를 향해 STX건설이 힘차게 질주합니다!</span>
           <button class="visual-bt">버튼</button>
         </div>
       </section>
-     
       <!-- 비지니스 -->
-      <section class="business"></section>
+      <section class="business" id="business">
+        <div class="business-inner container">
+          <!-- 비지니스 상단 -->
+          <div class="business-top">
+            <h2 class="business-title">STX Engineering & Construction Business</h2>
+            <p class="business-desc">
+              STX건설은 건물 역량 강화를 통해 건축, 주택, 토목 플랜트 사업 영역에서<br />
+              탁월한 성과를 인정받은 기업으로 자연과 기술의 공간에 인류의 가치를 추구합니다.
+            </p>
+          </div>
+          <!-- 비지니스 하단 -->
+          <div class="business-bottom">
+            <ul class="business-list">
+              <li><a href="#">건축사업</a></li>
+              <li><a href="#">주택사업</a></li>
+              <li><a href="#">토목사업</a></li>
+              <li><a href="#">플랜트/공작기계사업</a></li>
+              <li><a href="#">해외사업</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
       <!-- 뉴스 -->
-      <section class="news"></section>
+      <section class="news">
+        <!-- 바탕색 -->
+        <div class="news-bg"></div>
+        <div class="news-inner container clearfix">
+           <!-- 공지사항 -->
+           <div class="news-wrap">
+            <h3>공지사항</h3>
+            <div class="news-content">
+              <ul class="news-list">
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 분할계획서 변경공고 </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 에스티엑스건설자산관리 주식회사 해산결의에 따른 채권신고 안내 공고 (2차) </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 회사분할에 따른 주권제출 및 채권자 이의제출공고 </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> 본점 소재지 변경 알림 </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- 보도자료 -->
+          <div class="news-wrap">
+            <h3>보도자료</h3>
+            <div class="news-content">
+              <ul class="news-list">
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’ </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’ </span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="news-txt"> STX건설, 춘천 레고랜드 테마파크 시공사 ‘선정’ </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- 고객센터 -->
       <section class="cs"></section>
       <!-- 회사소개 -->
