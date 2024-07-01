@@ -52,66 +52,71 @@ body {
 }
 /* 모달창 */
 /* top버튼 */
-.top-buttom{
+.top-buttom {
   position: fixed;
   right: 30px;
   bottom: 60px;
-  z-index: 9999;
-  display: flex; /* 부모한테만 적용 */
+  z-index: 99999;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* 공간띄우기 */
+  gap: 10px;
 }
-/* 화살표 방향 바꾸기 */
-.top-btn img{
-  transform: rotate(180deg);
+.chat-btn {
+  animation: updown 1.5s infinite;
 }
-.top-btn img.up{
-  transform: rotate(0deg);
+/* 애니메이션 효과 */
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.chat-btn{
-  animation: updown 1.5s infinite
-}
-/* 애미메이션 효과 */
-@keyframes updown{
-  0%{transform: translateY(0);}
-  50%{transform: translateY(-10%);}
-  100%{transform: translateY(0);}
-}
-.chat-btn span{
+.chat-btn span {
   position: absolute;
-  top:34px;
+  top: 34px;
   left: -186px;
-width: 180px;
-background: #fff;
-border-radius: 23px;
-padding: 8px 10px;
-text-align: center;
-box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
-display: none;
+  width: 180px;
+  background-color: #fff;
+  border-radius: 23px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  display: none;
 }
-.chat-btn:hover span{
+.chat-btn:hover span {
   display: block;
 }
-.shop-btn{
+.shop-btn {
   position: relative;
   display: block;
-  width: 55PX;
-  line-height: 55PX;
-  background-color: #FFF;
-  font-size: 14PX;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
-  border-radius: 50%;
   box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
 }
-.top-btn{
+.top-btn {
   width: 55px;
   line-height: 55px;
   border-radius: 50%;
   background-color: #ed1c24;
   text-align: center;
   box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+.top-btn img{
+  transform: rotate(180deg);
+}
+.top-btn img.up{
+  transform: rotate(0deg);
 }
 /* 전체 레이아웃 */
 .wrap {
@@ -423,7 +428,7 @@ display: none;
 .news-wrap {
   position: relative;
   display: block;
-  width: calc(50% - 90px);
+  width: calc(50% - 95px);
 }
 .news-wrap:nth-child(1) {
   float: left;
@@ -445,68 +450,58 @@ display: none;
   position: relative;
   display: block;
   padding: 25px 0;
-  border-top: 1px solid rgba(225, 225, 225, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 .news-list li a {
   color: #fff;
-  position: relative;
-  display: block;
   font-size: 16px;
-}
-.news-list li a::after{
-  content: "";
-  top: 0;
-  right: 0%;
-  background: url("/images/bg_common.png")no-repeat;
-  background-position: -50px -6px;
   display: block;
-  position: absolute;
-  width: 57px;
-  height: 23px;
+  position: relative;
+}
+.news-list li a::after {
 }
 .news-txt {
   position: relative;
   display: block;
   /* 말줄임 표시 */
   width: 50%;
-  white-space: nowrap; /* 줄내림 x */
-text-overflow: ellipsis;
-overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 /* cs */
-.cs{
+.cs {
   position: relative;
   display: block;
   background-color: #f8f8f8;
   padding: 60px 0;
   height: 290px;
 }
-.cs-inner{
- position: relative;
- display: block;
- height: auto;
-}
-.cs-link{
+.cs-inner {
   position: relative;
   display: block;
-  width:calc(50% - 1px) ;
+  height: auto;
+}
+.cs-link {
+  position: relative;
+  display: block;
+  width: calc(50% - 1px);
   /* height: 200px; */
   padding: 40px 60px;
   float: left;
-  
 }
-.cs-link:first-child{
+.cs-link:first-child {
   height: 100%;
-  background: url("../images/bg_faq.png")no-repeat #fff;
+  background: url("../images/bg_faq.png") no-repeat #fff;
   background-position: calc(100% - 50px);
   margin-right: 1px;
 }
-.cs-link:last-child{
+.cs-link:last-child {
   height: 100%;
-  background: url("../images/bg_custom.png")no-repeat #fff;
+  background: url("../images/bg_custom.png") no-repeat #fff;
   background-position: calc(100% - 50px);
 }
-.cs-link h3{
+.cs-link h3 {
   position: relative;
   display: block;
   color: #000;
@@ -515,25 +510,25 @@ overflow: hidden;
   margin-bottom: 20px;
 }
 /* 회사소개 */
-.about{
+.about {
   position: relative;
   display: block;
   padding: 100px 0;
   background-color: #fff;
 }
-.about-inner{
+.about-inner {
   position: relative;
   display: block;
 }
 /* about-top */
-.about-top{
-position: relative;
-display: block;
-background: url("../images/img_about.png")no-repeat;
-background-position: 100%;
-margin-bottom: 80px;
+.about-top {
+  position: relative;
+  display: block;
+  background: url("../images/img_about.png") no-repeat;
+  background-position: 100%;
+  margin-bottom: 80px;
 }
-.about-top h2{
+.about-top h2 {
   position: relative;
   display: block;
   font-size: 44px;
@@ -541,16 +536,16 @@ margin-bottom: 80px;
   font-weight: 600;
   padding-top: 35px;
   margin-bottom: 55px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
-.about-top p{
- position: relative; 
- display: block;
- font-size: 15px;
- padding-left: 100px;
- padding-bottom: 70px;
+.about-top p {
+  position: relative;
+  display: block;
+  font-size: 15px;
+  padding-left: 100px;
+  padding-bottom: 70px;
 }
-.about-top p::before{
+.about-top p::before {
   content: "";
   position: absolute;
   top: 0;
@@ -559,7 +554,7 @@ margin-bottom: 80px;
   height: 5px;
   background-color: #ed1c24;
 }
-.about-top p b{
+.about-top p b {
   position: relative;
   display: block;
   font-size: 21px;
@@ -568,51 +563,50 @@ margin-bottom: 80px;
   padding-bottom: 25px;
 }
 /* about-botoom */
-.about-bottom{
+.about-bottom {
   position: relative;
   display: block;
   text-align: center;
 }
-.about-list{
+.about-list {
   position: relative;
   display: inline-block;
-background-color: antiquewhite;
+  background-color: antiquewhite;
 }
-.about-list li{
+.about-list li {
   position: relative;
   display: block;
   float: left;
 }
-.about-list li a{
+.about-list li a {
   position: relative;
   display: inline-block;
   font-size: 22px;
   color: #111;
   font-weight: 500;
 }
-.about-list li a::before{
+.about-list li a::before {
   content: "";
   display: block;
- /* position: absolute;
+  /* position: absolute;
  top: 0;
  left: 0; */
- width: 110px;
- height: 108px;
- background: url("../images/bg_icon.png")no-repeat;
- margin-bottom: 25px;
+  width: 110px;
+  height: 108px;
+  background: url("../images/bg_icon.png") no-repeat;
+  margin-bottom: 25px;
 }
-.about-list li:nth-child(1) a::before{
+.about-list li:nth-child(1) a::before {
   background-position: 0 0;
 }
 
-.about-list li:nth-child(2) a::before{
+.about-list li:nth-child(2) a::before {
   background-position: -110px 0;
-
 }
-.about-list li:nth-child(2){
+.about-list li:nth-child(2) {
   width: 560px;
 }
-.about-list li:nth-child(3) a::before{
+.about-list li:nth-child(3) a::before {
   background-position: -220px 0;
 }
 /* footer */
