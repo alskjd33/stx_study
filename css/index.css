@@ -412,3 +412,178 @@ body {
 text-overflow: ellipsis;
 overflow: hidden;
 }
+/* cs */
+.cs{
+  position: relative;
+  display: block;
+  background-color: #f8f8f8;
+  padding: 60px 0;
+  height: 290px;
+}
+.cs-inner{
+ position: relative;
+ display: block;
+ height: auto;
+}
+.cs-link{
+  position: relative;
+  display: block;
+  width:calc(50% - 1px) ;
+  /* height: 200px; */
+  padding: 40px 60px;
+  float: left;
+  
+}
+.cs-link:first-child{
+  height: 100%;
+  background: url("../images/bg_faq.png")no-repeat #fff;
+  background-position: calc(100% - 50px);
+  margin-right: 1px;
+}
+.cs-link:last-child{
+  height: 100%;
+  background: url("../images/bg_custom.png")no-repeat #fff;
+  background-position: calc(100% - 50px);
+}
+.cs-link h3{
+  position: relative;
+  display: block;
+  color: #000;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+/* 회사소개 */
+.about{
+  position: relative;
+  display: block;
+  padding: 100px 0;
+  background-color: #fff;
+}
+.about-inner{
+  position: relative;
+  display: block;
+}
+/* about-top */
+.about-top{
+position: relative;
+display: block;
+background: url("../images/img_about.png")no-repeat;
+background-position: 100%;
+margin-bottom: 80px;
+}
+.about-top h2{
+  position: relative;
+  display: block;
+  font-size: 44px;
+  color: #111;
+  font-weight: 600;
+  padding-top: 35px;
+  margin-bottom: 55px;
+  text-transform: uppercase; 
+}
+.about-top p{
+ position: relative; 
+ display: block;
+ font-size: 15px;
+ padding-left: 100px;
+ padding-bottom: 70px;
+}
+.about-top p::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 5px;
+  background-color: #ed1c24;
+}
+.about-top p b{
+  position: relative;
+  display: block;
+  font-size: 21px;
+  font-weight: 500;
+  color: #111;
+  padding-bottom: 25px;
+}
+/* about-botoom */
+.about-bottom{
+  position: relative;
+  display: block;
+  text-align: center;
+}
+.about-list{
+  position: relative;
+  display: inline-block;
+background-color: antiquewhite;
+}
+.about-list li{
+  position: relative;
+  display: block;
+  float: left;
+}
+.about-list li a{
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  color: #111;
+  font-weight: 500;
+}
+.about-list li a::before{
+  content: "";
+  display: block;
+ /* position: absolute;
+ top: 0;
+ left: 0; */
+ width: 110px;
+ height: 108px;
+ background: url("../images/bg_icon.png")no-repeat;
+ margin-bottom: 25px;
+}
+.about-list li:nth-child(1) a::before{
+  background-position: 0 0;
+}
+
+.about-list li:nth-child(2) a::before{
+  background-position: -110px 0;
+
+}
+.about-list li:nth-child(2){
+  width: 560px;
+}
+.about-list li:nth-child(3) a::before{
+  background-position: -220px 0;
+}
+/* footer */
+.footer {
+  position: relative;
+  display: block;
+  padding: 50px 0;
+  background-color: #4e4e4e;
+}
+.footer-inner {
+  position: relative;
+  display: block;
+}
+.footer-logo {
+  position: relative;
+  display: block;
+  float: left;
+  margin-right: 130px;
+}
+.footer-info {
+  position: relative;
+  display: block;
+  float: left;
+}
+.footer-list li {
+  position: relative;
+  display: block;
+  font-size: 13px;
+  color: #c3c3ce;
+  margin-bottom: 5px;
+}
+.footer-list li address {
+  /* address태그가 글자가 기울어지기 때문에 스타일 normal적용해서 똑바로 세움 */
+  font-size: normal;
+}
