@@ -62,6 +62,7 @@ body {
   align-items: center;
   gap: 10px; /* 공간띄우기 */
 }
+/* 화살표 방향 바꾸기 */
 .top-btn img{
   transform: rotate(180deg);
 }
@@ -647,3 +648,4 @@ background-color: antiquewhite;
   /* address태그가 글자가 기울어지기 때문에 스타일 normal적용해서 똑바로 세움 */
   font-size: normal;
 }
+
